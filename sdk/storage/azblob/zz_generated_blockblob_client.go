@@ -101,7 +101,7 @@ func (client *blockBlobClient) commitBlockListCreateRequest(ctx context.Context,
 	}
 	if blockBlobClientCommitBlockListOptions != nil && blockBlobClientCommitBlockListOptions.Metadata != nil {
 		for k, v := range blockBlobClientCommitBlockListOptions.Metadata {
-			req.Raw().Header.Set("x-ms-meta-"+k, v)
+			req.Raw().Header["x-ms-meta-"+k] = []string{v}
 		}
 	}
 	if leaseAccessConditions != nil && leaseAccessConditions.LeaseID != nil {
