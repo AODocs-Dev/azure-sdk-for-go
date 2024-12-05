@@ -1,0 +1,13 @@
+  apiVersion: backstage.io/v1alpha1
+  kind: Component
+  metadata:
+    name: azure-sdk-for-go
+    description: Github repository for azure-sdk-for-go
+    annotations:
+      google.com/cloudbuild-project-slug: ao-docs-tools
+      github.com/project-slug: AODocs-Dev/azure-sdk-for-go
+      sonarqube.org/project-key: AODocs-Dev_azure-sdk-for-go
+  spec:
+    type: service
+    lifecycle: production
+    owner: group:default/sre
